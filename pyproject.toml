@@ -3,25 +3,23 @@ build-backend = "setuptools.build_meta"
 requires = ["setuptools>=67.0", "setuptools_scm[toml]>=7.1"]
 
 [project]
-authors = [{"name" = "Muhammad Rehan"}]
+authors = [{"name" = "Muhammad Arslan"}]
 description = "This repository provides a RESTful API built with FastAPI and Snowflake, implementing basic CRUD operations for a clients table. It’s a simple, unprotected API for managing client data, ideal for learning FastAPI and Snowflake integration."
 dynamic = ["version"]
 license = {"file" = "LICENSE"}
 name = "fastapi_snowflake_challenge"
 readme = {file = "README.md", content-type = "text/markdown"}
 dependencies = [
-  "aiosqlite",
   "alembic",
-  "asyncpg",
   "fastapi",
-  "psycopg2-binary",
   "pydantic~=2.0",
   "pydantic-settings",
-  "SQLAlchemy"
+  "snowflake-sqlalchemy"
 ]
 
 [project.optional-dependencies]
 dev = [
+  "httpx",
   "build",
   "dapperdata",
   "glom",
